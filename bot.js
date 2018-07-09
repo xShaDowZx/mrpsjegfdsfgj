@@ -155,7 +155,7 @@ client.on('message',function(message) {
     let Swearing = '1h';
     let Advertising = '4h';
     let Spam = '2h';
-  var prefix = "#"
+  var prefix = "*"
    if(message.content.startsWith(prefix + "mute")) {
        if(!muteRole) return message.guild.createRole({ name: "Muted", permissions: [] });
        if(!message.guild.member(message.author).hasPermission("MANAGE_ROLES")) return message.channel.send("**- You don't have the needed permissions!**");
