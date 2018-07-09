@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '#'
+const prefix = '*'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -42,7 +42,7 @@ client.user.setGame(`Playing`,"#help")
         console.log(`ON ${client.guilds.size} Servers '     Script By : _xShaDowZx ' `);
       console.log(`----------------`);
     console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity(` ON ${client.guilds.size} Servers - #help`,"#")
+  client.user.setActivity(` ON ${client.guilds.size} Servers - *help`,"*")
   client.user.setStatus("Online")
   });
   client.on("guildCreate", guild => {
