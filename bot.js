@@ -171,7 +171,7 @@ client.on("message", message => {
 return message.reply("**:white_check_mark: .. The member was given Muted**").catch(console.error);
 } else {
     message.guild.member(user).addRole(muteRole).then(() => {
-return message.reply("**:white_check_mark: .. Done The member got muted**").catch(console.error);
+return message.reply("**Done The member got muted .. :white_check_mark:**").catch(console.error);
 });
   }
 
@@ -204,7 +204,7 @@ return message.reply("**:white_check_mark: .. Done The member got muted**").catc
 return message.reply("**:white_check_mark: .. Done Unmuted **").catch(console.error);
 } else {
     message.guild.member(user).removeRole(muteRole).then(() => {
-return message.reply("**:white_check_mark: .. Done Unmuted **").catch(console.error);
+return message.reply("**Done Unmuted .. :white_check_mark:**").catch(console.error);
 });
   }
 
