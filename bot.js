@@ -212,6 +212,34 @@ return message.reply("**Done Unmuted .. :white_check_mark:**").catch(console.err
 
 });
 
+//mutechannel and unmutechannel
+client.on('message', message => {
+
+    if (message.content === "*mutechannel") {
+                        if(!message.channel.guild) return message.reply(' This command only for servers');
+
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' You do not have permissions');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: false
+
+           }).then(() => {
+               message.reply("Chat has been closed :white_check_mark: ")
+           });
+             }
+if (message.content === "*unmutechannel") {
+    if(!message.channel.guild) return message.reply(' This command only for servers');
+
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You do not have permissions');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: true
+
+           }).then(() => {
+               message.reply("Chat has been opened:white_check_mark:")
+           });
+             }
+
+});
+
   
   
   client.login(process.env.BOT_TOKEN);
