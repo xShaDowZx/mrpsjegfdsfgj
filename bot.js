@@ -175,7 +175,7 @@ client.on('message',function(message) {
 2 : Advertising
 3 : Spamming
 \`\`\`
-__you have 20 seconds to choose __`)
+__**you have 20 seconds to choose** __`)
 .then(() => {
   message.channel.awaitMessages(response => response.content === '1', {
     max: 1,
