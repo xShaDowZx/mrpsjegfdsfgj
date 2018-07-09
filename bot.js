@@ -223,7 +223,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' You 
          SEND_MESSAGES: false
 
            }).then(() => {
-               message.reply("Chat has been closed :white_check_mark: ")
+               message.reply("**Chat has been muted **:white_check_mark: ")
            });
              }
 if (message.content === "*unmutechannel") {
@@ -234,7 +234,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You d
          SEND_MESSAGES: true
 
            }).then(() => {
-               message.reply("Chat has been opened:white_check_mark:")
+               message.reply("**Chat has been unmuted** :white_check_mark:")
            });
              }
 
