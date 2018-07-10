@@ -608,7 +608,7 @@ message.channel.send({embed});
 });
 //member
 client.on('message', message => {
-    if(message.content == '#member') {
+    if(message.content == '*member') {
     const embed = new Discord.RichEmbed()
     .setDescription(`**Members info
 :green_heart: online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
@@ -622,7 +622,7 @@ client.on('message', message => {
   });
 //say
 client.on('message', message => {
-  var prefix = "#"
+  var prefix = "*"
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
   
@@ -638,7 +638,7 @@ client.on('message', message => {
 });
 //bot
 client.on('message', message => {
-    if(message.content === "#bot") {
+    if(message.content === "*bot") {
         const embed = new Discord.RichEmbed()
         .setColor("#00FFFF")
   .addField('**Memory used 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
@@ -664,7 +664,7 @@ client.on("message", message => {
     });
 //Date and time
 client.on('message' , async (message) => {
-    var prefix = "#"
+    var prefix = "*"
       if (message.content.startsWith(prefix + 'day')) {
   var today = new Date()
   let Day = today.toString().split(" ")[0].concat("day");
@@ -698,7 +698,7 @@ const mapping = {
 
 
 client.on('message' , async (message) => {
-  var prefix = "#"
+  var prefix = "*"
        if(message.content.startsWith(prefix + "emoji")) {
           let args = message.content.split(" ").slice(1);
   if (args.length < 1) {
@@ -715,7 +715,7 @@ message.channel.send(
 });
 //flip
 client.on('message' , async (message) => {
-  var prefix = "#"
+  var prefix = "*"
  if (message.content.startsWith(prefix + 'flip')) {
   let args = message.content.split(" ").slice(1);
 if(!args[0]) return message.channel.send('Correct usage: **ks!reverse (text to reverse)**');
@@ -742,7 +742,7 @@ if(!args[0]) return message.channel.send('Correct usage: **ks!reverse (text to r
 });
 //Link
 client.on('message', message => {
-    if (message.content.startsWith("#Link")) {
+    if (message.content.startsWith("*Link")) {
 
   message.channel.createInvite({
         thing: true,
