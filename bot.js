@@ -362,6 +362,7 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-2 ➺ General commands :fire:**','**════════════**') 
 .addField('     **❧ *help-3 ➺ Music Commands __(Coming Soon)__ :musical_note: **' ,'**════════════**') 
 .addField('     **❧ *help-4 ➺ Management orders__(Staff Commands)__ :no_entry:**' ,'**════════════**') 
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -378,7 +379,8 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-setup-report ➺ Setup report 📝** ','**════════════**')  //Done
 .addField('     **❧ *help-setup-sug  ➺ Setup suggestions 📋** ','**════════════**')  //Done
 .addField('     **❧ *help-setup-welcome ➺ Setup welcome message 👋** ','**════════════**') //Done
-.addField('     **❧ *help-setup-goodbye ➺ setup goodbye message  😢** ','**════════════**') 
+.addField('     **❧ *help-setup-goodbye ➺ setup goodbye message  😢** ','**════════════**') //Dpne 
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -392,6 +394,7 @@ let embed = new Discord.RichEmbed()
 .setTitle('**:sparkle: ─══════  {✯Setup warn :warning:✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```⚠-warns```**") 
 .addField('** :ok_hand: The warn is going to be like this in ⚠-warns channel  **',"**https://imgur.com/XZd9yR3**") 
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -404,6 +407,7 @@ let embed = new Discord.RichEmbed()
 .setTitle('**:sparkle: ─══════  {✯Setup report 📝✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```📝-report```**") 
 .addField('** :ok_hand: The report is going to be like this in 📝-report channel  **',"**https://imgur.com/vNQALax**") 
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -416,6 +420,7 @@ let embed = new Discord.RichEmbed()
 .setTitle('**:sparkle: ─══════  {✯Setup suggestions 📋✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```📋-suggestions```**") 
 .addField('** :ok_hand: The suggestions is going to be like this in 📋-suggestions channel  **',"**https://imgur.com/PVrgyn8**") 
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -427,7 +432,8 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup welcome message 👋✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```👋-welcome```**") 
-.addField('** :ok_hand: The welcome message is going to be like this in 👋-welcome channel  **',"**https://imgur.com/kFf9Mar**") 
+.addField('** :ok_hand: The welcome message is going to be like this in 👋-welcome channel  **',"**https://imgur.com/kFf9Mar**")
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -439,7 +445,8 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup goodbye message  👋✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```😢-good-bye```**") 
-.addField('** :ok_hand: The goodbye message is going to be like this in 😢-good-bye channel  **',"**https://imgur.com/OA6EJGW**") 
+.addField('** :ok_hand: The goodbye message is going to be like this in 😢-good-bye channel  **',"**https://imgur.com/OA6EJGW**")
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -459,6 +466,7 @@ let embed = new Discord.RichEmbed()
 .addField("***unmute :smiley:  **","**-Unmute members**")
 .addField("***mutechannel :notepad_spiral:  : **","**-Mute channels**")
 .addField("***unmutechannel :pencil: **","**-Unmute channels**")
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -474,6 +482,7 @@ let embed = new Discord.RichEmbed()
 .addField("**#pause :musical_score:**","**-Turn off the temp timer**")
 .addField("**#resume :mute: **","**-Turn on the desired after the stop**")
 .addField("**#skip :left_right_arrow:**","**-Skip the song**")
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -836,6 +845,7 @@ let embed = new Discord.RichEmbed()
 .addField("***sug :notepad_spiral: **", "**-Your suggestion**")
 .addField("***report :pencil: **","**-Report members**") 
 .addField("***inv :red_circle:  **","**-Invite Nameless bot to your discord server**") 
+.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
