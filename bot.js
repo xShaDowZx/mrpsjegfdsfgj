@@ -288,7 +288,7 @@ if (msg.content.startsWith(`*report`)) {
 
   if (!msg.mentions.members.first()) return msg.reply('**You must mention person first** ```Example: *report @unknown#1547 spamming``` ')
 
-  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
+  if (!args[1]) return msg.reply(`Ummm .. Write your report`)
 
   if (msg.guild.channels.find('name', '📝-report')) { //channel name
 
