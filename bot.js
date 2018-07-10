@@ -378,7 +378,7 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup warn :warning:✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just create new channel and name it ```⚠-warns```**") 
-.addField('** The warn is going to be like this in ⚠-warns channel,"https://cdn.discordapp.com/attachments/464384021560950784/466262717825548297/bandicam_2018-07-10_18-21-10-754.jpg"
+.addField('** The warn is going to be like this in ⚠-warns channel**","https://cdn.discordapp.com/attachments/464384021560950784/466262717825548297/bandicam_2018-07-10_18-21-10-754.jpg"
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
