@@ -279,6 +279,37 @@ client.on('message', message => {
     }
   }
 });
+client.on('message', message => {
+	const prefix = '*'
+if(!message.channel.guild) return;
+if(message.content.startsWith(prefix + 'move')) {
+ if (message.member.hasPermission("MOVE_MEMBERS")) {
+ if (message.mentions.users.size === 0) {
+ return message.reply("**Mention a player to move it to you** ```Example: *move @unknown#1547```")
+}
+if (message.member.voiceChannel != null) {
+ if (message.mentions.members.first().voiceChannel != null) {
+ var authorchannel = message.member.voiceChannelID;
+ var usermentioned = message.mentions.members.first().id;
+var embed = new Discord.RichEmbed()
+ .setTitle("Succes!")
+ .setColor("#000000")
+ .setDescription(`**You moved <@${usermentioned}> to your voice channel successfully :white_check_mark: **`)
+var embed = new Discord.RichEmbed()
+.setTitle(`You are Moved in ${message.guild.name}`)
+ .setColor("#000000")
+.setDescription(`<@${message.author.id}> moved you to his channel!\nServer => ${message.guild.name}`)
+ message.guild.members.get(usermentioned).setVoiceChannel(authorchannel).then(m => message.channel.send(embed))
+message.guild.members.get(usermentioned).send(embed)
+} else {
+message.channel.send("**You can`t move this member **"+ message.mentions.members.first() +" **He must/should join voice to channel to move it**")
+}
+} else {
+ message.channel.send("**You have to be in voice channel if you want to move him to you**")
+}
+} else {
+message.react("❌")
+ }}});
 //report
 client.on('message', msg => { 
 if (msg.content.startsWith(`*report`)) {
@@ -508,6 +539,7 @@ let embed = new Discord.RichEmbed()
 .addField("***unmutechannel :pencil: **","**-Unmute channels**")
 .addField("***mutevoice :no_mouth:  **","**-Mute members (Voice)**")
 .addField("***unmutevoice :smile:  **","**-Unmute members (Voice)**")
+.addField("***move :airplane: **","**-Unmute members (Voice)**")
 .addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
