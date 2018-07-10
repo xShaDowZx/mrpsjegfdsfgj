@@ -759,6 +759,16 @@ Number of uses of the link : 100**`)
 
     }
 });
+//invite my bot to your discord server
+             client.on('message', message => {
+				    var prefix = "*"
+                if(message.content === prefix + "inv") {
+                    let embed = new Discord.RichEmbed ()
+                    embed.setTitle("**:arrow_right: Invite Nameless Bot!**")
+                    .setURL("https://discordapp.com/api/oauth2/authorize?client_id=465993722342014986&permissions=8&scope=bot");
+                   message.channel.sendEmbed(embed);
+                  }
+});
 ///Help Codes
 client.on('message', message => {
     if (message.content === "*help-2") {
@@ -779,6 +789,7 @@ let embed = new Discord.RichEmbed()
 .addField("***achieve :clap: **", "**-Achieve something in minecraft**")
 .addField("***sug :notepad_spiral: **", "**-Your suggestion**")
 .addField("***report :pencil: **","**-Report members**") 
+.addField("***inv :red_circle:  **","**-Invite Nameless bot to your discord server**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
