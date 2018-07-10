@@ -401,7 +401,7 @@ if (message.content === "*help-setup-sug") {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup suggestions 📋✯} ══════─ :sparkle: **')
-.addField('** How to setup warn?  **',"**Just Make new channel and name it ``📋-suggestions```**") 
+.addField('** How to setup warn?  **',"**Just Make new channel and name it ```📋-suggestions```**") 
 .addField('** :ok_hand: The suggestions is going to be like this in 📋-suggestions channel  **',"**https://cdn.discordapp.com/attachments/465460305087037452/466340299619434516/bandicam_2018-07-10_23-27-55-854.jpg**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
@@ -413,7 +413,7 @@ if (message.content === "*help-setup-welcome") {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup welcome message 👋✯} ══════─ :sparkle: **')
-.addField('** How to setup warn?  **',"**Just Make new channel and name it ``👋-welcome```**") 
+.addField('** How to setup warn?  **',"**Just Make new channel and name it ```👋-welcome```**") 
 .addField('** :ok_hand: The welcome message is going to be like this in 👋-welcome channel  **',"**https://cdn.discordapp.com/attachments/464587287955505153/466341053977591818/bandicam_2018-07-10_23-32-41-307.jpg**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
@@ -425,7 +425,7 @@ if (message.content === "*help-setup-goodbye") {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup goodbye message  👋✯} ══════─ :sparkle: **')
-.addField('** How to setup warn?  **',"**Just Make new channel and name it ``😢-good-bye```**") 
+.addField('** How to setup warn?  **',"**Just Make new channel and name it ```😢-good-bye```**") 
 .addField('** :ok_hand: The goodbye message is going to be like this in 😢-good-bye channel  **',"**https://cdn.discordapp.com/attachments/464587344981262346/466341826148827158/bandicam_2018-07-10_23-35-41-813.jpg**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
