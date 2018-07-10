@@ -239,6 +239,68 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You d
              }
 
 });
+//report
+client.on('message', msg => { 
+if (msg.content.startsWith(`*report`)) {
+
+   let args = msg.content.split(" ").slice(1);
+
+  if (!msg.mentions.members.first()) return msg.reply('**You must mention person first** ```Example: *report @unknown#1547 spamming``` ')
+
+  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
+
+  if (msg.guild.channels.find('name', '📝-report')) { //channel name
+
+    msg.guild.channels.find('name', '📝-report').send(`
+  **Report** : ${msg.mentions.members.first()}
+  ***Reported by***:  : ${msg.member}
+  **Room** : ${msg.channel.name}
+  ***Reason*** : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
+  `)
+  }
+}
+});
+//report
+client.on('message', msg => { 
+if (msg.content.startsWith(`*report`)) {
+
+   let args = msg.content.split(" ").slice(1);
+
+  if (!msg.mentions.members.first()) return msg.reply('**You must mention person first** ```Example: *report @unknown#1547 spamming``` ')
+
+  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
+
+  if (msg.guild.channels.find('name', '📝-report')) { //channel name
+
+    msg.guild.channels.find('name', '📝-report').send(`
+  **:warning: Report** : ${msg.mentions.members.first()}
+  ***Done by:***:  : ${msg.member}
+  **Room** : ${msg.channel.name}
+  ***:red_circle: Reason*** : :arrow_right: **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
+  `)
+  }
+}
+});
+//sug
+client.on('message', msg => { 
+if (msg.content.startsWith(`*sug`)) {
+
+   let args = msg.content.split(" ").slice(1);
+
+  if (!msg.mentions.members.first()) return msg.reply('**You must mention yourself first** ```Example: *sug  @unknown#1547 adding new commands``` ')
+
+  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
+
+  if (msg.guild.channels.find('name', '📋-suggestions')) { //channel name
+
+    msg.guild.channels.find('name', '📋-suggestions').send(`
+  ***Done by:***:  : ${msg.member}
+  **Room** : ${msg.channel.name}
+  ***:sparkle: Suggestion***: :arrow_right: **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
+  `)
+  }
+}
+});
 
   
   
