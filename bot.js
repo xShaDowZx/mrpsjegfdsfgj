@@ -361,11 +361,11 @@ if (message.content === "*help-1") {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════ {✯Choose✯} ══════─ :sparkle:**')
-.addField('     **❧ *help-setup-warn ➺ Setup warn :warning: ** ','**════════════**') 
-.addField('     **❧ *help-setup-report ➺ Setup report 📝** ','**════════════**') 
-.addField('     **❧ *help-setup-sug  ➺ Setup suggestions 📋** ','**════════════**') 
-.addField('     **❧ *help-setup-welcome ➺ Setup welcome 👋** ','**════════════**') 
-.addField('     **❧ *help-setup-goodbye ➺ setup goodbye 😢** ','**════════════**') 
+.addField('     **❧ *help-setup-warn ➺ Setup warn :warning: ** ','**════════════**')  //Done
+.addField('     **❧ *help-setup-report ➺ Setup report 📝** ','**════════════**')  //Done
+.addField('     **❧ *help-setup-sug  ➺ Setup suggestions 📋** ','**════════════**')  //Done
+.addField('     **❧ *help-setup-welcome ➺ Setup welcome message 👋** ','**════════════**') //Done
+.addField('     **❧ *help-setup-goodbye ➺ setup goodbye message  😢** ','**════════════**') 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -391,6 +391,42 @@ let embed = new Discord.RichEmbed()
 .setTitle('**:sparkle: ─══════  {✯Setup report 📝✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```📝-report```**") 
 .addField('** :ok_hand: The report is going to be like this in 📝-report channel  **',"**https://cdn.discordapp.com/attachments/464592972793643008/466338921522003988/bandicam_2018-07-10_23-22-29-442.jpg**") 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+//help suggestions
+client.on('message', message => {
+if (message.content === "*help-setup-suggestions") { 
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**:sparkle: ─══════  {✯Setup report 📝✯} ══════─ :sparkle: **')
+.addField('** How to setup warn?  **',"**Just Make new channel and name it ``📋-suggestions```**") 
+.addField('** :ok_hand: The suggestions is going to be like this in 📋-suggestions channel  **',"**https://cdn.discordapp.com/attachments/465460305087037452/466340299619434516/bandicam_2018-07-10_23-27-55-854.jpg**") 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+//help welcome
+client.on('message', message => {
+if (message.content === "*help-setup-welcome") { 
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**:sparkle: ─══════  {✯Setup welcome message 👋✯} ══════─ :sparkle: **')
+.addField('** How to setup warn?  **',"**Just Make new channel and name it ``👋-welcome```**") 
+.addField('** :ok_hand: The welcome message is going to be like this in 👋-welcome channel  **',"**https://cdn.discordapp.com/attachments/464587287955505153/466341053977591818/bandicam_2018-07-10_23-32-41-307.jpg**") 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+//help goodbye
+client.on('message', message => {
+if (message.content === "*help-setup-goodbye") { 
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**:sparkle: ─══════  {✯Setup goodbye message  👋✯} ══════─ :sparkle: **')
+.addField('** How to setup warn?  **',"**Just Make new channel and name it ``😢-good-bye```**") 
+.addField('** :ok_hand: The goodbye message is going to be like this in 😢-good-bye channel  **',"**https://cdn.discordapp.com/attachments/464587344981262346/466341826148827158/bandicam_2018-07-10_23-35-41-813.jpg**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
