@@ -433,7 +433,7 @@ message.channel.sendEmbed(embed);
 });
 //Staff commands 
 client.on('message', message => {
-if (message.content === "#help-4") {
+if (message.content === "*help-4") {
 if(!message.member.hasPermission('MUTE_MEMBERS')) return message.reply('This property is for management only');
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
@@ -452,7 +452,7 @@ message.channel.sendEmbed(embed);
 });
 //Music commands 
 client.on('message', message => {
-if (message.content === "#help-3") {
+if (message.content === "*help-3") {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField("** :musical_note: Music Commands __(Coming Soon)__ :musical_note: **","** **")
