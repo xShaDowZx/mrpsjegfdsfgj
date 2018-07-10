@@ -357,6 +357,7 @@ message.channel.sendEmbed(embed);
 //help-1
 client.on('message', message => {
 if (message.content === "*help-1") { 
+  if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**This is for management (Owner/Staff) only**");
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════ {✯Choose✯} ══════─ :sparkle:**')
@@ -365,6 +366,18 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-setup-sug  ➺ Setup suggestions 📋** ','**════════════**') 
 .addField('     **❧ *help-setup-welcome ➺ Setup welcome 👋** ','**════════════**') 
 .addField('     **❧ *help-setup-goodbye ➺ setup goodbye 😢** ','**════════════**') 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+
+//help setup warn
+client.on('message', message => {
+if (message.content === "*help-setup-warn") { 
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**:sparkle: ─══════  {✯Setup warn :warning:✯} ══════─ :sparkle: **')
+.addField('** How to setup warn?  **',"**Just Make new channel and name it ```⚠-warns```**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
