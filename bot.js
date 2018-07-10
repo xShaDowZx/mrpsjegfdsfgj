@@ -397,10 +397,10 @@ message.channel.sendEmbed(embed);
 });
 //help suggestions
 client.on('message', message => {
-if (message.content === "*help-setup-suggestions") { 
+if (message.content === "*help-setup-sug") { 
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.setTitle('**:sparkle: ─══════  {✯Setup report 📝✯} ══════─ :sparkle: **')
+.setTitle('**:sparkle: ─══════  {✯Setup suggestions 📋✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ``📋-suggestions```**") 
 .addField('** :ok_hand: The suggestions is going to be like this in 📋-suggestions channel  **',"**https://cdn.discordapp.com/attachments/465460305087037452/466340299619434516/bandicam_2018-07-10_23-27-55-854.jpg**") 
 .setColor('#7d2dbe')
