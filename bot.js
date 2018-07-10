@@ -280,27 +280,7 @@ if (msg.content.startsWith(`*sug`)) {
   }
 }
 });
-//report
-client.on('message', msg => { 
-if (msg.content.startsWith('*report')) {
 
-   let args = msg.content.split(" ").slice(1);
-
-  if (!msg.mentions.members.first()) return msg.reply('**You must mention person first** ```Example: *report @unknown#1547 spamming``` ')
-
-  if (!args[1]) return msg.reply(`Ummm .. Write your report`)
-
-  if (msg.guild.channels.find('name', '📝-report')) { //channel name
-
-    msg.guild.channels.find('name', '📝-report').send(`
-  **:warning: Report** : ${msg.mentions.members.first()}
-  ***Done by:***:  : ${msg.member}
-  **Room** : ${msg.channel.name}
-  ***:red_circle: Reason*** : :arrow_right: **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
-  `)
-  }
-}
-});
 
   
   
