@@ -73,7 +73,7 @@ client.on("message", function(message) {
     let toEmbed = new Discord.RichEmbed()
     var prefix = "*"
    if(message.content.startsWith(prefix + "ban")) {
-       if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("**# - You dont have enough permissions!**");
+       if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("**You dont have enough permissions!**");
        if(!toBan) return message.reply("** Mention a user! ```Example: *ban @unknown#1547 spamming```**");
        if(toBan.id === ("447121312960479242")) return message.reply("**# You cannot ban me!**");
        if(toBan === message.member.guild.owner) return message.reply("**# You cannot ban the owner of the server!**");
@@ -102,7 +102,7 @@ client.on('message',function(message) {
     let toEmbed = new Discord.RichEmbed()
     var prefix = "*"
    if(message.content.startsWith(prefix + 'kick')) {
-       if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**# - You dont have enough permissions!**');
+       if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**You dont have enough permissions!**');
        if(!toReason) return message.reply("**Mention a user!  ```Example: *kick @unknown#1547 spamming```**")
        if(toKick.id === message.author.id) return message.reply("**# You cannot kick yourself!**")
        if(!message.guild.member(toKick).bannable) return message.reply("**# - I cannot ban this person!**")
@@ -216,9 +216,9 @@ return message.reply("**Done Unmuted .. :white_check_mark:**").catch(console.err
 client.on('message', message => {
 
     if (message.content === "*mutechannel") {
-                        if(!message.channel.guild) return message.reply(' This command only for servers');
+                        if(!message.channel.guild) return message.reply(' **This command only for servers**');
 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' You do not have permissions');
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **You do not have permissions**');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: false
 
@@ -227,9 +227,9 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' You 
            });
              }
 if (message.content === "*unmutechannel") {
-    if(!message.channel.guild) return message.reply(' This command only for servers');
+    if(!message.channel.guild) return message.reply(' **This command only for servers**');
 
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You do not have permissions');
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**You do not have permissions**');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: true
 
@@ -251,7 +251,7 @@ client.on('message', message => {
       }
       let muteMember = message.guild.member(message.mentions.users.first());
       if(!muteMember) {
-        return message.reply("Try again.");
+        return message.reply("**Try again.**");
       }
       muteMember.setMute(true);
       if(muteMember) {
@@ -271,7 +271,7 @@ client.on('message', message => {
     }
     let muteMember = message.guild.member(message.mentions.users.first());
     if(!muteMember) {
-      return message.reply("Try again.");
+      return message.reply("**Try again.**");
     }
     muteMember.setMute(false);
     if(muteMember) {
@@ -318,7 +318,7 @@ if (msg.content.startsWith(`*report`)) {
 
   if (!msg.mentions.members.first()) return msg.reply('**You must mention person first** ```Example: *report @unknown#1547 spamming``` ')
 
-  if (!args[1]) return msg.reply(`Ummm .. Write your report`)
+  if (!args[1]) return msg.reply(`**Ummm .. Write your report**`)
 
   if (msg.guild.channels.find('name', '📝-report')) { //channel name
 
@@ -339,7 +339,7 @@ if (msg.content.startsWith(`*sug`)) {
 
   if (!msg.mentions.members.first()) return msg.reply('**You must mention yourself first** ```Example: *sug  @unknown#1547 adding new commands``` ')
 
-  if (!args[1]) return msg.reply(`Ummm .. Write your suggestion`)
+  if (!args[1]) return msg.reply(`**Ummm .. Write your suggestion**`)
 
   if (msg.guild.channels.find('name', '📋-suggestions')) { //channel name
 
