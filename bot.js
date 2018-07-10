@@ -515,5 +515,273 @@ client.on('message', message => {
         message.channel.sendMessage('**:ping_pong: Pong! In **`' + `${client.ping}` + ' ms`');
     }
 });
+//avatar 
+client.on('message', message => {
+    if (message.content.startsWith("*avatar")) {
+        var mentionned = message.mentions.users.first();
+    var x5bzm;
+      if(mentionned){
+          var x5bzm = mentionned;
+      } else {
+          var x5bzm = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setImage(`${x5bzm.avatarURL}`)
+      message.channel.sendEmbed(embed);
+    }
+});
+//server
+client.on('message', function(msg) {
+         var prefix = "*"
+    if(msg.content.startsWith (prefix  + 'server')) {
+      let embed = new Discord.RichEmbed()
+      .setColor('RANDOM')
+      .setThumbnail(msg.guild.iconURL)
+      .setTitle(`Showing Details Of  **${msg.guild.name}*`)
+      .addField(':globe_with_meridians:** Server Type**',`[** __${msg.guild.region}__ **]`,true)
+      .addField(':medal:** __Roles__**',`[** __${msg.guild.roles.size}__ **]`,true)
+      .addField(':red_circle:**__ Number of members__**',`[** __${msg.guild.memberCount}__ **]`,true)
+      .addField(':large_blue_circle:**__ Number of members online__**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
+      .addField(':pencil:**__ Text Channels__**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
+      .addField(':microphone:**__ Voice Channels__**',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
+      .addField(':crown:**__ Owner__**',`**${msg.guild.owner}**`,true)
+      .addField(':id:**__ Server Id__**',`**${msg.guild.id}**`,true)
+      .addField(':date:**__ The server was done in__**',msg.guild.createdAt.toLocaleString())
+      msg.channel.send({embed:embed});
+    }
+  });
+
+//id
+client.on('message', message => {
+    var prefix = "*"
+var args = message.content.split(" ").slice(1);    
+if(message.content.startsWith(prefix + 'id')) {
+var year = message.author.createdAt.getFullYear()
+var month = message.author.createdAt.getMonth()
+var day = message.author.createdAt.getDate()
+var men = message.mentions.users.first();  
+let args = message.content.split(' ').slice(1).join(' ');
+if (args == '') {
+var z = message.author;
+}else {
+var z = message.mentions.users.first();
+}
+
+let d = z.createdAt;          
+let n = d.toLocaleString();   
+let x;                       
+let y;                        
+
+if (z.presence.game !== null) {
+y = `${z.presence.game.name}`;
+} else {
+y = "No Playing... |💤.";
+}
+if (z.bot) {
+var w = 'Bot';
+}else {
+var w = 'Member';
+}
+let embed = new Discord.RichEmbed()
+.setColor("#502faf")
+.addField('🔱| Your Name:',`**<@` + `${z.id}` + `>**`, true)
+.addField('🛡| ID:', "**"+ `${z.id}` +"**",true)
+.addField('♨| Playing:','**'+y+'**' , true)
+.addField('🤖| Your account type:',"**"+ w + "**",true)    
+.addField('📛| The code is right for your account:',"**#" +  `${z.discriminator}**`,true)
+.addField('**The date in which your account was created | 📆 **: ' ,year + "-"+ month +"-"+ day)    
+.addField("**The date you entered the server| ⌚   :**", message.member.joinedAt.toLocaleString())    
+
+.addField('**⌚ | The date of creating your full account:**', message.author.createdAt.toLocaleString())
+.addField("**The last message for you | 💬  :**", message.author.lastMessage)            
+
+.setThumbnail(`${z.avatarURL}`)
+.setFooter(message.author.username, message.author.avatarURL)
+
+message.channel.send({embed});
+    if (!message) return message.reply('**Mention correctly  ❌ **').catch(console.error);
+
+}
+
+});
+//member
+client.on('message', message => {
+    if(message.content == '#member') {
+    const embed = new Discord.RichEmbed()
+    .setDescription(`**Members info
+:green_heart: online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
+:heart:dnd:       ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}
+:yellow_heart: idle:      ${message.guild.members.filter(m=>m.presence.status == 'idle').size}   
+:black_heart: offline:   ${message.guild.members.filter(m=>m.presence.status == 'offline').size} 
+:blue_heart:   all:  ${message.guild.memberCount}**`)         
+         message.channel.send({embed});
+
+    }
+  });
+//say
+client.on('message', message => {
+  var prefix = "#"
+    if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
+  
+    let command = message.content.split(" ")[0];
+    command = command.slice(prefix.length);
+  
+    let args = message.content.split(" ").slice(1);
+  
+    if (command == "say") {
+     message.channel.sendMessage(args.join("  "))
+     message.delete()
+    }
+});
+//bot
+client.on('message', message => {
+    if(message.content === "#bot") {
+        const embed = new Discord.RichEmbed()
+        .setColor("#00FFFF")
+  .addField('**Memory used 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
+         .addField('**Connection Speed  📡**' , `${Date.now() - message.createdTimestamp}` + ' ms')
+        .addField('**using the processor 💿**', `${(process.cpuUsage().rss / 10000).toFixed()}%`, true)
+        .addField('**🌐 Number of servers**' , `${client.guilds.size}`, true)
+        .addField('**users number 👥 **' , `${client.users.size}`, true)
+               message.channel.sendEmbed(embed);
+           }
+});
+//MC skins
+client.on("message", message => {
+    var prefix = "#"
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "MCskin") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://minotar.net/armor/body/${args}`, "skin.png");
+    message.channel.send(image)
+        }
+    });
+//Date and time
+client.on('message' , async (message) => {
+    var prefix = "#"
+      if (message.content.startsWith(prefix + 'day')) {
+  var today = new Date()
+  let Day = today.toString().split(" ")[0].concat("day");
+  let Month = today.toString().split(" ")[1]
+  let Year = today.toString().split(" ")[3]
+  message.channel.send(`\`${Day}\` \`${Month}\` \`${Year}\`\n\`Time of day:\` \`${today.toString().split(" ")[4]}\``)
+  }
+  }); 
+//emoji 
+const mapping = {
+  ' ': '   ',
+  '0': ':zero:',
+  '1': ':one:',
+  '2': ':two:',
+  '3': ':three:',
+  '4': ':four:',
+  '5': ':five:',
+  '6': ':six:',
+  '7': ':seven:',
+  '8': ':eight:',
+  '9': ':nine:',
+  '!': ':grey_exclamation:',
+  '?': ':grey_question:',
+  '#': ':hash:',
+  '*': ':asterisk:'
+};
+
+'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
+  mapping[c] = mapping[c.toUpperCase()] = ` :regional_indicator_${c}:`;
+});
+
+
+client.on('message' , async (message) => {
+  var prefix = "#"
+       if(message.content.startsWith(prefix + "emoji")) {
+          let args = message.content.split(" ").slice(1);
+  if (args.length < 1) {
+    message.channel.send('You must provide some text to emojify!');
+}
+
+message.channel.send(
+    args.join(' ')
+        .split('')
+        .map(c => mapping[c] || c)
+        .join('')
+);
+};
+});
+//flip
+client.on('message' , async (message) => {
+  var prefix = "#"
+ if (message.content.startsWith(prefix + 'flip')) {
+  let args = message.content.split(" ").slice(1);
+if(!args[0]) return message.channel.send('Correct usage: **ks!reverse (text to reverse)**');
+
+  function reverseString(str) {
+      return str.split("").reverse().join("");
+  }
+
+  let sreverse = reverseString(args.join(' '))
+   
+  if(args[0] === sreverse) {
+  
+  sreverse = `${args.join(' ')}..Wait... You broke it!`
+  
+  }
+  const reverseEmbed = new Discord.RichEmbed()
+  .setAuthor(`${message.author.tag}`, message.author.avatarURL)
+  .setColor(0xFFF000)
+  .addField('Input: ', '```' + `${args.join(' ')}` + '```')
+  .addField('Output: ', '```' + `${sreverse}` + '```')
+  message.channel.send({embed: reverseEmbed})
+    
+}
+});
+//Link
+client.on('message', message => {
+    if (message.content.startsWith("#Link")) {
+
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 100,
+        maxAge: 86400
+    }).then(invite =>
+      message.author.sendMessage(invite.url)
+    )
+  message.channel.send("**The link was sent with a private message**")
+
+message.author.send(`**Link duration: day
+Number of uses of the link : 100**`)
+
+
+    }
+});
+///Help Codes
+client.on('message', message => {
+    if (message.content === "*help-2") {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField("**:globe_with_meridians: __General commands__**","** **")
+.addField("**ping :stopwatch:**","**-Check your connection speed**")
+.addField("***avatar :camping:**","** -Pictures of the chosen person**")
+.addField("***bot :floppy_disk:**","**  -Info about the bot**")
+.addField("***server :recycle:**","** -For server information**")
+.addField("***id :id: **", "**-Shows your ID**")
+.addField("***member :hearts: **", "**-Shows who everyone Status**")
+.addField("***emoji :gem: **", "**-Write your word in emoji**")
+.addField("***flip :arrows_clockwise: **","**-Flip your word**")
+.addField("***day :cloud: **","**-Shows the date and the time**")
+.addField("***Link :link: **","**-Give you our Discord invite link**")
+.addField("***MCskin :heart_eyes:  **", "**-Shows your minecraft skin**")
+.addField("***achieve :clap: **", "**-Achieve something in minecraft**")
+.addField("***sug :notepad_spiral: **", "**-Your suggestion**")
+.addField("***report :pencil: **","**-Report members**") 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
  
   client.login(process.env.BOT_TOKEN);
