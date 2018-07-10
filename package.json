@@ -28,6 +28,7 @@
     "sqlite3": "^4.0.0",
     "youtube-info": "^1.2.0",
     "math-expression-evaluator": "^1.2.17",
+    "figlet": "^1.2.0",
     "common-tags": "^1.7.2",
     "ytdl-core": "^0.20.3"
   },
