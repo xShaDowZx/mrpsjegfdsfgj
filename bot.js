@@ -378,7 +378,7 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup warn :warning:✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```⚠-warns```**") 
-.addField('** :ok_hand: The warn is going to be like this in ⚠-warns channel  **',"**https://cdn.discordapp.com/attachments/464561756036136980/466264334616494080/bandicam_2018-07-10_18-27-39-777.jpg**") 
+.addField('** :ok_hand: The warn is going to be like this in ⚠-warns channel  **',"**https://imgur.com/XZd9yR3**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -390,7 +390,7 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup report 📝✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```📝-report```**") 
-.addField('** :ok_hand: The report is going to be like this in 📝-report channel  **',"**https://cdn.discordapp.com/attachments/464592972793643008/466338921522003988/bandicam_2018-07-10_23-22-29-442.jpg**") 
+.addField('** :ok_hand: The report is going to be like this in 📝-report channel  **',"**https://imgur.com/vNQALax**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -402,7 +402,7 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup suggestions 📋✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```📋-suggestions```**") 
-.addField('** :ok_hand: The suggestions is going to be like this in 📋-suggestions channel  **',"**https://cdn.discordapp.com/attachments/465460305087037452/466340299619434516/bandicam_2018-07-10_23-27-55-854.jpg**") 
+.addField('** :ok_hand: The suggestions is going to be like this in 📋-suggestions channel  **',"**https://imgur.com/PVrgyn8**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -414,7 +414,7 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup welcome message 👋✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```👋-welcome```**") 
-.addField('** :ok_hand: The welcome message is going to be like this in 👋-welcome channel  **',"**https://cdn.discordapp.com/attachments/464587287955505153/466341053977591818/bandicam_2018-07-10_23-32-41-307.jpg**") 
+.addField('** :ok_hand: The welcome message is going to be like this in 👋-welcome channel  **',"**https://imgur.com/kFf9Mar**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -426,7 +426,7 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup goodbye message  👋✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```😢-good-bye```**") 
-.addField('** :ok_hand: The goodbye message is going to be like this in 😢-good-bye channel  **',"**https://cdn.discordapp.com/attachments/464587344981262346/466341826148827158/bandicam_2018-07-10_23-35-41-813.jpg**") 
+.addField('** :ok_hand: The goodbye message is going to be like this in 😢-good-bye channel  **',"**https://imgur.com/OA6EJGW**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
