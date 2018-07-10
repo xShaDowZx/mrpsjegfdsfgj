@@ -765,7 +765,7 @@ client.on('message', message => {
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField("**:globe_with_meridians: __General commands__**","** **")
-.addField("**ping :stopwatch:**","**-Check your connection speed**")
+.addField("***ping :stopwatch:**","**-Check your connection speed**")
 .addField("***avatar :camping:**","** -Pictures of the chosen person**")
 .addField("***bot :floppy_disk:**","**  -Info about the bot**")
 .addField("***server :recycle:**","** -For server information**")
