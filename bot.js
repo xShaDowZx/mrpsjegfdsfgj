@@ -54,7 +54,7 @@ client.on('message', msg => {
     if (msg.content.startsWith('*warn')) {
       if(!msg.member.hasPermission("MUTE_MEMBERS")) return;
        let args = msg.content.split(" ").slice(1);
-      if (!msg.mentions.members.first()) return msg.reply('**mention a user/player ```Example: *warn @unknown#1547 spamming```**')
+      if (!msg.mentions.members.first()) return msg.reply('**Mention a user/player ```Example: *warn @unknown#1547 spamming```**')
       if (!args[1]) return msg.reply('**Reason for warning**')
       if (msg.guild.channels.find('name', '⚠-warns')) {
         msg.guild.channels.find('name', '⚠-warns').send(`
@@ -74,7 +74,7 @@ client.on("message", function(message) {
     var prefix = "*"
    if(message.content.startsWith(prefix + "ban")) {
        if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply("**# - You dont have enough permissions!**");
-       if(!toBan) return message.reply("**# - Mention a user! ```Example: *ban @unknown#1547 spamming```**");
+       if(!toBan) return message.reply("** Mention a user! ```Example: *ban @unknown#1547 spamming```**");
        if(toBan.id === ("447121312960479242")) return message.reply("**# You cannot ban me!**");
        if(toBan === message.member.guild.owner) return message.reply("**# You cannot ban the owner of the server!**");
        if(toBan.bannable) return message.reply("**# - I cannot ban someone with a higher role than me!**");
@@ -103,7 +103,7 @@ client.on('message',function(message) {
     var prefix = "*"
    if(message.content.startsWith(prefix + 'kick')) {
        if(!message.member.hasPermission("KICK_MEMBERS")) return message.reply('**# - You dont have enough permissions!**');
-       if(!toReason) return message.reply("**# - Mention a user!  ```Example: *kick @unknown#1547 spamming```**")
+       if(!toReason) return message.reply("**Mention a user!  ```Example: *kick @unknown#1547 spamming```**")
        if(toKick.id === message.author.id) return message.reply("**# You cannot kick yourself!**")
        if(!message.guild.member(toKick).bannable) return message.reply("**# - I cannot ban this person!**")
        let toEmbed;
