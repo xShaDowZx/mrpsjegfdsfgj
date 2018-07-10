@@ -328,7 +328,7 @@ client.on('guildMemberAdd', member => {
         .setAuthor(member.user.username, member.user.avatarURL)
         .setThumbnail(member.user.avatarURL)
         .setTitle(`**Good Bye! :raised_hand::skin-tone-1: :pensive:**`)
-        .setDescription(`**Good bye Nice to meet you :raised_hand::skin-tone-1: :pensive: **`)
+        .setDescription(`**Good bye Nice to meet you** :raised_hand::skin-tone-1: :pensive:`)
         .addField('**:bust_in_silhouette:   remain**',`**[ ${member.guild.memberCount} ]**`,true)
         .setColor('RED')
         .setFooter(`==== We wish you the best ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
