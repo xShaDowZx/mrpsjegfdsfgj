@@ -495,5 +495,12 @@ client.on("message", async message => {
 message.channel.send(image)
     }
 });
+client.on('message', message => {
+  var prefix = "*"
+    if (message.author.id === client.user.id) return;
+            if (message.content.startsWith(prefix + "ping")) {
+        message.channel.sendMessage('**:ping_pong: Pong! In **`' + `${client.ping}` + ' ms`');
+    }
+});
  
   client.login(process.env.BOT_TOKEN);
