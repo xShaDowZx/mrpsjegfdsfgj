@@ -337,6 +337,21 @@ client.on('guildMemberAdd', member => {
     if (!channel) return;
     channel.send({embed : embed});
     });
-  
+
+
+//help
+client.on('message', message => {
+    if (message.content === "*help") {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**:sparkle: ─══════ {✯Choose✯} ══════─ :sparkle:**')
+.addField('     **❧ *help-1 ➺ Setup the bot :wrench: ** ','**════════════**') 
+.addField('     **❧ *help-2 ➺ General commands :fire:**','**════════════**') 
+.addField('     **❧ *help-3 ➺ Music Commands __(Coming Soon)__ :musical_note: **' ,'**════════════**') 
+.addField('     **❧ *help-4 ➺ Management(Staff) orders(Commands) :no_entry:**' ,'**════════════**') 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
   
   client.login(process.env.BOT_TOKEN);
