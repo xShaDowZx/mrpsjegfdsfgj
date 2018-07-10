@@ -27,6 +27,8 @@
     "sqlite": "^2.9.1",
     "sqlite3": "^4.0.0",
     "youtube-info": "^1.2.0",
+    "math-expression-evaluator": "^1.2.17",
+    "common-tags": "^1.7.2",
     "ytdl-core": "^0.20.3"
   },
   "engines": {
