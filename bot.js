@@ -156,7 +156,7 @@ client.on("message", message => {
   let modlog = client.channels.find('name', 'mute-log');
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
   if (!muteRole) return message.reply("** There is no Mute Role 'Muted' **").catch(console.error);
-  if (message.mentions.users.size < 1) return message.reply('** You must mention person first**').catch(console.error);
+  if (message.mentions.users.size < 1) return message.reply('** You must mention person first ```Example: *mute @unknown#1547 spamming```**').catch(console.error);
   
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
@@ -190,7 +190,7 @@ return message.reply("**Done The member got muted .. :white_check_mark:**").catc
   let modlog = client.channels.find('name', 'mute-log');
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
   if (!muteRole) return message.reply("** There is no Mute Role 'Muted' **").catch(console.error);
-  if (message.mentions.users.size < 1) return message.reply('** You must mention person first**').catch(console.error);
+  if (message.mentions.users.size < 1) return message.reply('** You must mention person first ```Example: *unmute @unknown#1547```**').catch(console.error);
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
