@@ -348,7 +348,7 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-1 ➺ Setup the bot :wrench: ** ','**════════════**') 
 .addField('     **❧ *help-2 ➺ General commands :fire:**','**════════════**') 
 .addField('     **❧ *help-3 ➺ Music Commands __(Coming Soon)__ :musical_note: **' ,'**════════════**') 
-.addField('     **❧ *help-4 ➺ Management(Staff) orders(Commands) :no_entry:**' ,'**════════════**') 
+.addField('     **❧ *help-4 ➺ Management orders__(Staff Commands)__ :no_entry:**' ,'**════════════**') 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -437,7 +437,7 @@ if (message.content === "*help-4") {
 if(!message.member.hasPermission('MUTE_MEMBERS')) return message.reply('This property is for management only');
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField("**:radioactive: Management(Staff) orders(Commands) :no_entry:**","** **")
+.addField("**:radioactive: Management orders__(Staff Commands)__ :no_entry:**","** **")
 .addField("***clear :octagonal_sign:**","**Clear Chat**")
 .addField("***kick  :outbox_tray:**","**Kick members**")
 .addField("***ban  :no_entry:**","**Ban members**")
