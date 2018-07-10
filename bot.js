@@ -252,10 +252,10 @@ if (msg.content.startsWith(`*report`)) {
   if (msg.guild.channels.find('name', '📝-report')) { //channel name
 
     msg.guild.channels.find('name', '📝-report').send(`
-  **Report** : ${msg.mentions.members.first()}
+  **:warning: Report** : ${msg.mentions.members.first()}
   ***Reported by***:  : ${msg.member}
   **Room** : ${msg.channel.name}
-  ***Reason*** : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
+  ***:red_circle: Reason*** : :arrow_right: **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
   `)
   }
 }
