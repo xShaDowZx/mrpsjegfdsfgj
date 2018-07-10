@@ -539,7 +539,7 @@ let embed = new Discord.RichEmbed()
 .addField("***unmutechannel :pencil: **","**-Unmute channels**")
 .addField("***mutevoice :no_mouth:  **","**-Mute members (Voice)**")
 .addField("***unmutevoice :smile:  **","**-Unmute members (Voice)**")
-.addField("***move :airplane: **","**-Unmute members (Voice)**")
+.addField("***move :airplane: **","**-Move members to you (Voice)**")
 .addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
