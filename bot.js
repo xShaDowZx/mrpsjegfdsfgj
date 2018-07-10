@@ -247,7 +247,7 @@ if (msg.content.startsWith(`*report`)) {
 
   if (!msg.mentions.members.first()) return msg.reply('**You must mention person first** ```Example: *report @unknown#1547 spamming``` ')
 
-  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
+  if (!args[1]) return msg.reply(`Ummm .. Write your report`)
 
   if (msg.guild.channels.find('name', '📝-report')) { //channel name
 
@@ -268,7 +268,7 @@ if (msg.content.startsWith(`*sug`)) {
 
   if (!msg.mentions.members.first()) return msg.reply('**You must mention yourself first** ```Example: *sug  @unknown#1547 adding new commands``` ')
 
-  if (!args[1]) return msg.reply(`Ummm .. Write your message`)
+  if (!args[1]) return msg.reply(`Ummm .. Write your suggestion`)
 
   if (msg.guild.channels.find('name', '📋-suggestions')) { //channel name
 
@@ -300,6 +300,19 @@ if(!message.channel.guild) return;
          message.channel.sendEmbed(Embed11)
     }
 });
+//bot owner 
+client.on('message', message => {
+  var prefix = "*"
+  if (!message.content.startsWith(prefix)) return;
+  const verifed = ["236192758765715456"]; 
+if (message.content.startsWith(prefix + 'owner')) {
+if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`**   The owner of the bot is here**` + `✅`)
+} else {
+   message.reply('**You are not the owner of the bot**' + '❌');   
+}
+}
+});
+
 //Welcome
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', '👋-welcome');
