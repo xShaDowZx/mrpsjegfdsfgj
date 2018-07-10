@@ -239,6 +239,46 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You d
              }
 
 });
+//mute voice
+client.on('message', message => {
+  var prefix = "*"
+      if(message.content.startsWith(prefix + 'mutevoice')) {
+        if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**You do not have permission to give mute voice**:x: ").then(m => m.delete(5000));
+        if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
+         
+      if(message.mentions.users.size === 0) {
+        return message.reply("**Mention a player to give him mute** ```Example: *mutevoice @unknown#1547```");
+      }
+      let muteMember = message.guild.member(message.mentions.users.first());
+      if(!muteMember) {
+        return message.reply("Try again.");
+      }
+      muteMember.setMute(true);
+      if(muteMember) {
+        message.channel.sendMessage("**User got voice muted successfully.**");
+      }
+    }
+  });
+//unmute voice
+  client.on('message', message => {
+    var prefix = "*"
+    if(message.content.startsWith(prefix + 'unmutevoice')) {
+      if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**You do not have permission to give mute voice**:x: ").then(m => m.delete(5000));
+      if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I Don't Have `MUTE_MEMBERS` Permission**").then(msg => msg.delete(6000))
+       
+    if(message.mentions.users.size === 0) {
+        return message.reply("**Mention a player to unmute him** ```Example: *unmutevoice @unknown#1547```");
+    }
+    let muteMember = message.guild.member(message.mentions.users.first());
+    if(!muteMember) {
+      return message.reply("Try again.");
+    }
+    muteMember.setMute(false);
+    if(muteMember) {
+      message.channel.sendMessage("**User got unmuted voice successfully.**");
+    }
+  }
+});
 //report
 client.on('message', msg => { 
 if (msg.content.startsWith(`*report`)) {
@@ -462,10 +502,12 @@ let embed = new Discord.RichEmbed()
 .addField("***kick  :outbox_tray:**","**-Kick members**")
 .addField("***ban  :no_entry:**","**-Ban members**")
 .addField("***warn :warning: **","**-Warn members**")
-.addField("***mute :no_mouth: **","**-Mute members**")
+.addField("***mute :neutral_face:  **","**-Mute members**")
 .addField("***unmute :smiley:  **","**-Unmute members**")
 .addField("***mutechannel :notepad_spiral:  : **","**-Mute channels**")
 .addField("***unmutechannel :pencil: **","**-Unmute channels**")
+.addField("***mutevoice :no_mouth:  **","**-Mute members (Voice)**")
+.addField("***unmutevoice :smile:  **","**-Unmute members (Voice)**")
 .addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
