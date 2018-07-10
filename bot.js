@@ -308,7 +308,7 @@ client.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
-        .addField('**:running_shirt_with_sash: | name :  **',`**${member}**`)
+        .addField('**:hugging:  | name :  **',`**${member}**`)
         .addField('**:loudspeaker: | Welcome to Codes**' , `**Welcome to the server, ${member} :wave: **`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('**➡| You are the member number**',`**${member.guild.memberCount}**`)
