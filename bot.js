@@ -282,7 +282,7 @@ if (msg.content.startsWith(`*sug`)) {
 });
 //report
 client.on('message', msg => { 
-if (msg.content.startsWith(`*report`)) {
+if (msg.content.startsWith('*report')) {
 
    let args = msg.content.split(" ").slice(1);
 
