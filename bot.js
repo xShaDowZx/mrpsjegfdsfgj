@@ -390,7 +390,7 @@ let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════  {✯Setup report 📝✯} ══════─ :sparkle: **')
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```📝-report```**") 
-.addField('** :ok_hand: The warn is going to be like this in 📝-report channel  **',"**https://cdn.discordapp.com/attachments/464592972793643008/466338921522003988/bandicam_2018-07-10_23-22-29-442.jpg**") 
+.addField('** :ok_hand: The report is going to be like this in 📝-report channel  **',"**https://cdn.discordapp.com/attachments/464592972793643008/466338921522003988/bandicam_2018-07-10_23-22-29-442.jpg**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
