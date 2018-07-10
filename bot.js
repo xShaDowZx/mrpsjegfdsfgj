@@ -431,5 +431,39 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
+//Staff commands 
+client.on('message', message => {
+if (message.content === "#help-4") {
+if(!message.member.hasPermission('MUTE_MEMBERS')) return message.reply('This property is for management only');
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField("**:radioactive: Management(Staff) orders(Commands) :no_entry:**","** **")
+.addField("***clear :octagonal_sign:**","**Clear Chat**")
+.addField("***kick  :outbox_tray:**","**Kick members**")
+.addField("***ban  :no_entry:**","**Ban members**")
+.addField("***warn :warning: **","**Warn members**")
+.addField("***mute :no_mouth: : **","**Mute members**")
+.addField("***unmute :smiley:  : **","**Unmute members**")
+.addField("***mutechannel :notepad_spiral:  : **","**Mute channels**")
+.addField("***unmutechannel :pencil:  : **","**Unmute channels**")
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+//Music commands 
+client.on('message', message => {
+if (message.content === "#help-3") {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField("** :musical_note: Music Commands __(Coming Soon)__ :musical_note: **","** **")
+.addField("**#play :musical_note:**","**Turn on the desired**")
+.addField("**#stop  :musical_keyboard:**","**Stop required**")
+.addField("**#pause :musical_score:**","**Turn off the temp timer**")
+.addField("**#resume :mute: **","**Turn on the desired after the stop**")
+.addField("**#skip :left_right_arrow:**","**Skip the song**")
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
  
   client.login(process.env.BOT_TOKEN);
