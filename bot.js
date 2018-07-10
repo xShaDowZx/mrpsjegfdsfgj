@@ -769,6 +769,51 @@ Number of uses of the link : 100**`)
                    message.channel.sendEmbed(embed);
                   }
 });
+//uptime 
+client.on('message', message => {
+    var prefix = "*"
+if (message.content.startsWith(prefix + "uptime")) {
+   let uptime = client.uptime;
+
+   let days = 0;
+   let hours = 0;
+   let minutes = 0;
+   let seconds = 0;
+   let notCompleted = true;
+
+   while (notCompleted) {
+
+       if (uptime >= 8.64e+7) {
+
+           days++;
+           uptime -= 8.64e+7;
+
+       } else if (uptime >= 3.6e+6) {
+
+           hours++;
+           uptime -= 3.6e+6;
+
+       } else if (uptime >= 60000) {
+
+           minutes++;
+           uptime -= 60000;
+
+       } else if (uptime >= 1000) {
+           seconds++;
+           uptime -= 1000;
+
+       }
+
+       if (uptime < 1000)  notCompleted = false;
+
+   }
+
+   message.channel.send("`" + `${days} days, ${hours} hrs, ${minutes} min , ${seconds} sec` + "`");
+
+
+}
+});
+
 ///Help Codes
 client.on('message', message => {
     if (message.content === "*help-2") {
@@ -783,6 +828,7 @@ let embed = new Discord.RichEmbed()
 .addField("***member :hearts: **", "**-Shows who everyone Status**")
 .addField("***emoji :gem: **", "**-Write your word in emoji**")
 .addField("***flip :arrows_clockwise: **","**-Flip your word**")
+.addField("***uptime :timer: **","**-Bot uptime**")
 .addField("***day :cloud: **","**-Shows the date and the time**")
 .addField("***Link :link: **","**-Give you your Discord invite link**")
 .addField("***MCskin :heart_eyes:  **", "**-Shows your minecraft skin**")
@@ -794,5 +840,7 @@ let embed = new Discord.RichEmbed()
 message.channel.sendEmbed(embed);
 }
 });
+
+
  
   client.login(process.env.BOT_TOKEN);
