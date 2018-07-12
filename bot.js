@@ -576,7 +576,7 @@ __(Staff Commands)__
 
 ════════════
 
-:red_circle: Server support tools: ➾ https://discord.gg/uEx6Bxq
+:red_circle: Server support :tools: ➾ https://discord.gg/uEx6Bxq
 
 ════════════
 
@@ -622,7 +622,7 @@ __(Coming Soon)__
 
 ════════════
 
-:red_circle: Server support tools: ➾ https://discord.gg/uEx6Bxq
+:red_circle: Server support :tools: ➾ https://discord.gg/uEx6Bxq
 
 ════════════
 
@@ -1067,7 +1067,7 @@ client.on("message", message => {
 
 ════════════
 
-:red_circle: Server support tools: ➾ https://discord.gg/uEx6Bxq
+:red_circle: Server support :tools: ➾ https://discord.gg/uEx6Bxq
 
 ════════════
 
