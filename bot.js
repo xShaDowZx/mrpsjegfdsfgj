@@ -943,7 +943,7 @@ if(!args[0]) return message.reply('**Please write the text you want**');
 //help commands
 client.on("message", message => {
   var prefix ="*"
-    if (message.content === (prefix + "help")) {
+    if (message.content === (prefix + "help-2")) {
      const embed = new Discord.RichEmbed() 
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
