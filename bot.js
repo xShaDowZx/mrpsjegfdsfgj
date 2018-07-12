@@ -551,21 +551,47 @@ message.channel.sendEmbed(embed);
 }
 });
 //Music commands 
-client.on('message', message => {
-if (message.content === "*help-3") {
-let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField("** :musical_note: Music Commands __(Coming Soon)__ :musical_note: **","** **")
-.addField("**#play :musical_note:**","**-Turn on the desired**")
-.addField("**#stop  :musical_keyboard:**","**-Stop required**")
-.addField("**#pause :musical_score:**","**-Turn off the temp timer**")
-.addField("**#resume :mute: **","**-Turn on the desired after the stop**")
-.addField("**#skip :left_right_arrow:**","**-Skip the song**")
-.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
-.setColor('#7d2dbe')
-message.channel.sendEmbed(embed);
-}
-});
+client.on("message", message => {
+  var prefix ="*"
+    if (message.content === (prefix + "help-3")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+
+
+ **
+╔[❖════════════❖]╗
+              Prefix = ' * '
+╚[❖════════════❖]╝
+
+╔[❖════════════❖]╗
+    :musical_note: Music Commands :musical_note:
+╚[❖════════════❖]╝
+
+__(Coming Soon)__
+
+❖ *play :musical_note:➾ Plays stated youtube URL
+
+❖ *stop  :musical_keyboard: ➾ Stops music playing
+
+❖ *pause :musical_score: ➾ Pauses current music
+
+❖ *resume  :recycle: ➾ Resumes current song
+
+❖ *skip  :left_right_arrow: ➾ Skip the song
+
+════════════
+
+:red_circle: Server support tools: ➾ https://discord.gg/uEx6Bxq
+
+════════════
+
+**`)
+   message.channel.sendEmbed(embed)
+   
+   }
+   }); 
 //achieve
 const sql = require("sqlite");
 client.on("message", async message => {
