@@ -940,35 +940,74 @@ if(!args[0]) return message.reply('**Please write the text you want**');
            })
 }
 });
-///Help Codes
-client.on('message', message => {
-    if (message.content === "*help-2") {
-let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField("**:globe_with_meridians: __General commands__**","** **")
-.addField("***ping :stopwatch:**","**-Check your connection speed**")
-.addField("***avatar :camping:**","** -Pictures of the chosen person**")
-.addField("***bot :floppy_disk:**","**  -Info about the bot**")
-.addField("***server :recycle:**","** -For server information**")
-.addField("***id :id: **", "**-Shows your ID**")
-.addField("***member :hearts: **", "**-Shows who everyone Status**")
-.addField("***emoji :gem: **", "**-Write your word in emoji**")
-.addField("***flip :arrows_clockwise: **","**-Flip your word**")
-.addField("***calculate :thinking:  **","**-calculate**")
-.addField("***tag :pen_ballpoint:   **","**-put your name or any other name**")
-.addField("***uptime :timer: **","**-Bot uptime**")
-.addField("***day :cloud: **","**-Shows the date and the time**")
-.addField("***Link :link: **","**-Give you your Discord invite link**")
-.addField("***MCskin :heart_eyes:  **", "**-Shows your minecraft skin**")
-.addField("***achieve :clap: **", "**-Achieve something in minecraft**")
-.addField("***sug :notepad_spiral: **", "**-Your suggestion**")
-.addField("***report :pencil: **","**-Report members**") 
-.addField("***inv :red_circle:  **","**-Invite Nameless bot to your discord server**") 
-.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
-.setColor('#7d2dbe')
-message.channel.sendEmbed(embed);
-}
-});
+//help commands
+client.on("message", message => {
+  var prefix ="*"
+    if (message.content === (prefix + "help")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+
+
+ **
+╔[❖════════════❖]╗
+             Prefix = ' * '
+╚[❖════════════❖]╝
+
+╔[❖════════════❖]╗
+            :globe_with_meridians: General commands
+╚[❖════════════❖]╝
+
+
+❖ *ping :stopwatch:➾ Check your connection speed
+
+❖ *avatar  :camping: ➾ Shows your avatar or other players/members avatar
+
+❖ *bot :floppy_disk: ➾ Info about the bot
+
+❖ *server  :recycle: ➾ For server information
+
+❖ *id  :id: ➾ Shows your ID
+
+❖ *member :hearts: ➾ Shows everyone Status
+
+❖ *emoji  :gem: ➾ Write your word in emoji
+
+❖ *flip  :arrows_clockwise: ➾ Flip your word
+
+❖ *calculate :thinking: ➾ calculate
+
+❖ *tag :pen_ballpoint: ➾ put your name or any other name
+
+❖ *uptime  :timer: ➾ Bot uptime
+
+❖ *day :cloud: ➾ Shows the date and the time
+
+❖ *Link  :link: ➾ Give you your Discord invite link 
+
+❖ *MCskin :heart_eyes: ➾ Shows your minecraft skin 
+
+❖ *achieve :clap: ➾ Achieve something in minecraft
+
+❖ *sug :notepad_spiral: ➾ Your suggestion
+
+❖ *report :pencil: ➾ Report members
+
+❖ *inv :red_circle: ➾ Invite Nameless bot to your discord server
+
+==================================================================
+
+:red_circle: Server support tools: ➾ https://discord.gg/uEx6Bxq
+
+==================================================================
+
+**`)
+   message.channel.sendEmbed(embed)
+   
+   }
+   }); 
+
 
 
  
