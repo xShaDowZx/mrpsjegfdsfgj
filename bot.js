@@ -4,7 +4,7 @@ const prefix = '*'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setActivity(`Playing`,"#help")
+client.user.setActivity(`Playing`,"*help")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -337,7 +337,7 @@ if (msg.content.startsWith(`*sug`)) {
 
    let args = msg.content.split(" ").slice(1);
 
-  if (!msg.mentions.members.first()) return msg.reply('**You must mention yourself first** ```Example: *sug  @unknown#1547 adding new commands``` ')
+  if (!msg.mentions.members.first()) return msg.reply('**You must mention yourself first** ```Example: *sug  @YourName#1547 adding new commands``` ')
 
   if (!args[1]) return msg.reply(`**Ummm .. Write your suggestion**`)
 
