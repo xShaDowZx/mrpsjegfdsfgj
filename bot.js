@@ -956,7 +956,7 @@ client.on("message", message => {
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
-            :globe_with_meridians: General commands
+          :globe_with_meridians: General commands
 ╚[❖════════════❖]╝
 
 
@@ -996,11 +996,11 @@ client.on("message", message => {
 
 ❖ *inv :red_circle: ➾ Invite Nameless bot to your discord server
 
-==================================================================
+════════════
 
 :red_circle: Server support tools: ➾ https://discord.gg/uEx6Bxq
 
-==================================================================
+════════════
 
 **`)
    message.channel.sendEmbed(embed)
