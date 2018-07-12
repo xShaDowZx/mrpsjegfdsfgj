@@ -528,28 +528,59 @@ message.channel.sendEmbed(embed);
 }
 });
 //Staff commands 
-client.on('message', message => {
-if (message.content === "*help-4") {
-if(!message.member.hasPermission('MUTE_MEMBERS')) return message.reply('This property is for management only');
-let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField("**:radioactive: Management orders__(Staff Commands)__ :no_entry:**","** **")
-.addField("***clear :octagonal_sign:**","**-Clear Chat**")
-.addField("***kick  :outbox_tray:**","**-Kick members**")
-.addField("***ban  :no_entry:**","**-Ban members**")
-.addField("***warn :warning: **","**-Warn members**")
-.addField("***mute :neutral_face:  **","**-Mute members**")
-.addField("***unmute :smiley:  **","**-Unmute members**")
-.addField("***mutechannel :notepad_spiral:  **","**-Mute channels**")
-.addField("***unmutechannel :pencil: **","**-Unmute channels**")
-.addField("***mutevoice :no_mouth:  **","**-Mute members (Voice)**")
-.addField("***unmutevoice :smile:  **","**-Unmute members (Voice)**")
-.addField("***move :airplane: **","**-Move members to you (Voice)**")
-.addField("**:red_circle:  Server support :tools:   **","**-https://discord.gg/uEx6Bxq**") 
-.setColor('#7d2dbe')
-message.channel.sendEmbed(embed);
-}
-});
+client.on("message", message => {
+  var prefix ="*"
+    if (message.content === (prefix + "help-4")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+
+
+ **
+╔[❖════════════❖]╗
+              Prefix = ' * '
+╚[❖════════════❖]╝
+
+╔[❖════════════❖]╗
+  :radioactive:Management orders:no_entry:
+╚[❖════════════❖]╝
+
+__(Staff Commands)__
+
+❖ *clear :octagonal_sign:➾ Clear Chat
+
+❖ *kick  :outbox_tray: ➾ Kick members
+
+❖ *ban :no_entry: ➾ Ban members
+
+❖ *warn  :warning: ➾ Warn members
+
+❖ *mute  :neutral_face: ➾ Mute members
+
+❖ *unmute  :smiley: ➾ Unmute members
+
+❖ *mutechannel  :notepad_spiral: ➾ Mute channels
+
+❖ *unmutechannel  :pencil: ➾ Unmute channels
+
+❖ *mutevoice  :no_mouth: ➾ Mute members (Voice)
+
+❖ *unmutevoice  :smile: ➾ Unmute members (Voice)
+
+❖ *move  :airplane: ➾ Move members to your Voice channel (Voice)
+
+════════════
+
+:red_circle: Server support tools: ➾ https://discord.gg/uEx6Bxq
+
+════════════
+
+**`)
+   message.channel.sendEmbed(embed)
+   
+   }
+   }); 
 //Music commands 
 client.on("message", message => {
   var prefix ="*"
@@ -982,7 +1013,7 @@ client.on("message", message => {
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
-          :globe_with_meridians: General commands
+         :globe_with_meridians: General commands
 ╚[❖════════════❖]╝
 
 
