@@ -791,16 +791,14 @@ client.on('message', message => {
 });
 //bot
 client.on('message', message => {
-    if(message.content === "*bot") {
-        const embed = new Discord.RichEmbed()
-        .setColor("#00FFFF")
-  .addField('**Memory used 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
-         .addField('**Connection Speed  📡**' , `${Date.now() - message.createdTimestamp}` + ' ms')
-        .addField('**using the processor 💿**', `${(process.cpuUsage().rss / 10000).toFixed()}%`, true)
-        .addField('**🌐 Number of servers**' , `${client.guilds.size}`, true)
-        .addField('**users number 👥 **' , `${client.users.size}`, true)
-               message.channel.sendEmbed(embed);
-           }
+  if(message.content === "*bot") {
+      const embed = new Discord.RichEmbed()
+      .setColor("#00FFFF")
+      .setDescription(`**Servers**🌐 **__${client.guilds.size}__**
+**Users**👥 **__${client.users.size}__**
+**Channels**📚 **__${client.channels.size}__** `)
+             message.channel.sendEmbed(embed);
+         }
 });
 //MC skins
 client.on("message", message => {
