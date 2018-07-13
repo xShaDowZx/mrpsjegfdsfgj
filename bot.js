@@ -442,7 +442,7 @@ message.channel.sendEmbed(embed);
 //help-1
 client.on('message', message => {
 if (message.content === "*help-1") { 
-  if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**This is for management (Owner/Staff) only**");
+  if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply("**This is for management only (Who have __ADMINISTRATOR__ ON can setup the bot)**");
 let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setTitle('**:sparkle: ─══════ {✯Choose✯} ══════─ :sparkle:**')
