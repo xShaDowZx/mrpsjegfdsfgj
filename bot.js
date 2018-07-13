@@ -1003,6 +1003,21 @@ if(!args[0]) return message.reply('**Please write the text you want**');
            })
 }
 });
+/server avatar
+client.on("message", message => {    
+          if(!message.channel.guild) return;
+   if(message.author.bot) return;
+      if(message.content === "*ser-av"){ 
+          const embed = new Discord.RichEmbed()
+  
+      .setTitle(`** __${message.guild.name}__ Server Avatar: :arrow_down: **`)
+  .setAuthor(message.author.username, message.guild.iconrURL)
+    .setColor('RANDOM')
+    .setImage(message.guild.iconURL)
+
+   message.channel.send({embed});
+      }
+  });
 //help commands
 client.on("message", message => {
   var prefix ="*"
@@ -1030,6 +1045,8 @@ client.on("message", message => {
 ❖ *ping :stopwatch:➾ Check your connection speed
 
 ❖ *avatar  :camping: ➾ Shows your avatar or other players/members avatar
+
+❖ *ser-av  :tent:  ➾ Shows your server avatar
 
 ❖ *bot :floppy_disk: ➾ Info about the bot
 
