@@ -1003,7 +1003,7 @@ if(!args[0]) return message.reply('**Please write the text you want**');
            })
 }
 });
-/server avatar
+//server avatar
 client.on("message", message => {    
           if(!message.channel.guild) return;
    if(message.author.bot) return;
