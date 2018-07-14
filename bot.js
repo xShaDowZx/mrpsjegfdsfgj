@@ -1072,6 +1072,8 @@ client.on("message", message => {
 
 ❖ *hack  :satellite:  ➾ Fake hack 
 
+❖ *sh  🔎  ➾ Search for members
+
 ❖ *Link  :link: ➾ Give you your Discord invite link 
 
 ❖ *MCskin :heart_eyes: ➾ Shows your minecraft skin 
@@ -1231,6 +1233,38 @@ client.on('message', message => {
         message.channel.sendEmbed(embed);
     }
 });
+
+//search for member
+client.on('message', message => {
+  var prefix = "*"
+   let args = message.content.split(" ").slice(1);
+  if (message.content.startsWith(prefix + "sh")) {
+let Embed = new Discord.RichEmbed()
+        .setColor(0x36393e);
+    if (!args[0]) {
+        Embed.setFooter(`Example: *sh Name`);
+        return message.channel.send(Embed); 
+    }
+
+    if (args[0].length <= 1) {
+        Embed.setFooter(`Incorrect usage: sh < 1+ characterSeach >`);
+        return message.channel.send(Embed); 
+    }
+    let array = []; 
+    let number = 0; 
+    message.guild.members.map(m => { 
+        if (m.user.username.toUpperCase().includes(args[0].toUpperCase())) { 
+            number++; 
+            array.push(`${number}. ${m.user.username}`); 
+        }
+    });
+    Embed.setTitle(`Results for "${args[0]}"`);
+    Embed.setDescription(`\`\`\`${array.slice(0, 30).join(`\n`)}\`\`\``);
+
+    message.channel.send(Embed);
+   
+   }
+}); 
 
  
   client.login(process.env.BOT_TOKEN);
