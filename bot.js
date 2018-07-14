@@ -1072,7 +1072,7 @@ client.on("message", message => {
 
 ❖ *hack  :satellite:  ➾ Fake hack 
 
-❖ *sh  🔎  ➾ Search for members
+❖ *sh  🔎  ➾ Search for members in your discord server
 
 ❖ *Link  :link: ➾ Give you your Discord invite link 
 
