@@ -1054,6 +1054,8 @@ client.on("message", message => {
 
 ❖ *id  :id: ➾ Shows your ID
 
+❖ *roles  :eight_pointed_black_star:  ➾ Shows your server roles
+
 ❖ *member :hearts: ➾ Shows everyone Status
 
 ❖ *emoji  :gem: ➾ Write your word in emoji
@@ -1219,8 +1221,16 @@ client.on('message', message => {
     user.send({embed: embed1});
 }
 });
-
-
+//Rples
+client.on('message', message => {
+    if (message.content === '*roles') {
+        var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
+        const embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .addField('**Roles**:',`**[${roles}]**`)
+        message.channel.sendEmbed(embed);
+    }
+});
 
  
   client.login(process.env.BOT_TOKEN);
