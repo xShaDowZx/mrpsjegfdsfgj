@@ -1301,7 +1301,7 @@ client.on("guildMemberAdd", (member) => {
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
                     console.log(3);
-                    channel.send(`**${member} Invited by: ${Invite.inviter}'s invite ${Invite.code}**`)          
+                    channel.send(`**${member} joined, Invited by: ${Invite.inviter}'s invite link https://discord.gg/${Invite.code}**`)          
  }
             dat[Inv] = Invite.uses;
         })
