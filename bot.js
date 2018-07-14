@@ -1068,6 +1068,8 @@ client.on("message", message => {
 
 ❖ *day :cloud: ➾ Shows the date and the time
 
+❖ *hack  :satellite:  ➾ Fake hack 
+
 ❖ *Link  :link: ➾ Give you your Discord invite link 
 
 ❖ *MCskin :heart_eyes: ➾ Shows your minecraft skin 
@@ -1184,6 +1186,38 @@ delete warn[message.author.id];
      message.author.send(embed20)
   
   }
+});
+//fake hack
+client.on('message', message => {
+  var prefix = "*"
+     if(message.content.startsWith(prefix + "hack")) {
+ let args = message.content.split(" ").slice(1);
+
+    var user = message.mentions.users.first();
+    var reason = args.slice(1).join(' ');
+    const embed = new Discord.RichEmbed()
+        .setColor(0xFFB200)
+        .setTimestamp();
+
+    if (!user) {
+        embed.addField("**【✭ Nameless Bot ✭】**", '**Who do you want to hack? ```Example: *hack @unknown#1547 Test```**')
+            .setFooter(`Nameless Bot`);
+        return message.channel.send({embed});
+    } if (!reason) {
+        embed.addField("**【✭ Nameless Bot ✭】**", `**Reason for hacking**`)
+        return message.channel.send({embed});
+    }
+    embed.addField("**【✭ Nameless Bot ✭】**", `**Done ${user.tag}! got hacked**`)
+        .setFooter(`Nameless`);
+    message.channel.send({embed});
+    const embed1 = new Discord.RichEmbed()
+        .setColor(0xFFB200)
+        .setTimestamp()
+        .addField("**【✭ Nameless Bot ✭】**", `**You got hacked**`)
+        .addField("**Reason for hacking**", `**${reason}**`)
+        .setFooter(`**Hack type: is Unknown**`);
+    user.send({embed: embed1});
+}
 });
 
 
