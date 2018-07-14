@@ -353,7 +353,7 @@ if (msg.content.startsWith(`*sug`)) {
 });
 //your bot has been added to new server
 client.on('guildCreate', guild => {
-    client.channels.get("466223542166618123").send(`**Woops new server ✅
+    client.channels.get("467682139975057408").send(`**Nameless Bot joined a new server ✅
   Server name: __${guild.name}__
   Server owner: __${guild.owner}__**`)
   });
