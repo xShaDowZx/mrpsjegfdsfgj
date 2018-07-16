@@ -1060,8 +1060,6 @@ client.on("message", message => {
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`
-
-
  **
 ╔[❖════════════❖]╗
               Nameless Bot
@@ -1118,10 +1116,11 @@ client.on("message", message => {
 
 ❖ *report :pencil: ➾ Report members
 
+❖ *Staff :wrench:  ➾ Shows Nameless Bot Staff Team
+
 ❖ *inv :red_circle: ➾ Invite Nameless bot to your discord server
 
 ❖ *Support :wrench:  ➾ Join Nameless Support Discord
-
 ════════════
 
 :red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
