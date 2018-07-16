@@ -458,7 +458,8 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-setup-report ➺ Setup report 📝** ','**════════════**')  //Done
 .addField('     **❧ *help-setup-sug  ➺ Setup suggestions 📋** ','**════════════**')  //Done
 .addField('     **❧ *help-setup-welcome ➺ Setup welcome message 👋** ','**════════════**') //Done
-.addField('     **❧ *help-setup-goodbye ➺ setup goodbye message  😢** ','**════════════**') //Dpne 
+.addField('     **❧ *help-setup-goodbye ➺ setup goodbye message  😢** ','**════════════**') //Done
+.addField('     **❧ *help-setup-AutoRole ➺ setup Auto Role :gear: ** ','**════════════**') //Done
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
@@ -530,6 +531,19 @@ let embed = new Discord.RichEmbed()
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```😢-good-bye```**")
 .addField('** :pushpin: Important:  **',"**After you make `😢-good-bye` go to this channel __perms__ then got to `@everyone` __disable send messages__**") 
 .addField('** :ok_hand: The goodbye message is going to be like this in `😢-good-bye` channel  **',"**https://imgur.com/OA6EJGW**")
+.addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
+//help AutoRole
+client.on('message', message => {
+if (message.content === "*help-setup-AutoRole") { 
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**:sparkle: ─══════  {✯Setup AutoRole :gear:✯} ══════─ :sparkle: **')
+.addField('** How to setup AutoRole?  **',"**Just Make new role and name it ```Member```**")
+.addField('** :ok_hand: **',"**I am sorry we can just do Auto role for Member (For now)**")
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
