@@ -1105,15 +1105,6 @@ client.on("message", message => {
    
    }
    }); 
-//Anti Adv
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-      if(!message.member.hasPermission('ADMINISTRATOR'))
-        message.delete()
-    return message.reply(`** :anger: __Advertising__ is not allowed here! :angry: **`)
-    }
-});
 //Anti Spam
 const ms = require("ms");
 
@@ -1231,7 +1222,7 @@ client.on('message', message => {
     user.send({embed: embed1});
 }
 });
-//Rples
+//Roles
 client.on('message', message => {
     if (message.content === '*roles') {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
