@@ -1357,5 +1357,35 @@ client.on('message', message => {
     return message.reply(`** :anger: __Advertising__ is not allowed here! :angry: **`)
     }
 });
+//Staff
+client.on("message", message => {
+  var prefix ="*"
+    if (message.content === (prefix + "Staff")) {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#580e6b")
+         .setThumbnail(message.author.avatarURL)
+         .setDescription(`
+**
+⫷༺Nameless Bot Staff༺⫸
+
+Nameless Head Developers👑:
+-【✭ @_xShaDowZx#1920 ✭】 
+-【✭ @Witherr#1360 ✭】
+════════════
+Nameless Support Manager:
+-༺ @_𝕱𝖊𝖆𝖗𝖑𝖊𝖘𝖘#0175 ༻
+════════════
+Nameless Supporters:
+:one: -@BarisE#5634 
+:two: -@Ashton#0546 
+:three: -@SammyB#0788 
+════════════
+:red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
+════════════
+**`)
+   message.channel.sendEmbed(embed)
+   
+   }
+   }); 
  
 client.login(process.env.BOT_TOKEN);
