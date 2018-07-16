@@ -938,7 +938,7 @@ Number of uses of the link : 100**`)
 				    var prefix = "*"
                 if(message.content === prefix + "inv") {
                     let embed = new Discord.RichEmbed ()
-                    embed.setTitle("**:arrow_right: Invite Nameless Bot!**")
+                    embed.setTitle("** :arrow_right: Invite Nameless Bot to your Discord Server!**")
                     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=465993722342014986&permissions=8&scope=bot");
                    message.channel.sendEmbed(embed);
                   }
@@ -1041,6 +1041,17 @@ client.on("message", message => {
    message.channel.send({embed});
       }
   });
+//Join Support Server
+             client.on('message', message => {
+				    var prefix = "*"
+                if(message.content === prefix + "Support") {
+                    let embed = new Discord.RichEmbed ()
+                    embed.setTitle("** :arrow_right: Join Nameless Support Discord!**")
+                    .setURL("https://discord.gg/YnaS8Up");
+                   message.channel.sendEmbed(embed);
+                  }
+});
+
 //help commands
 client.on("message", message => {
   var prefix ="*"
