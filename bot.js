@@ -1116,7 +1116,7 @@ client.on("message", message => {
 
 ❖ *report :pencil: ➾ Report members
 
-❖ *Staff :wrench:  ➾ Shows Nameless Bot Staff Team
+❖ *Staff 💙  ➾ Shows Nameless Bot Staff Team
 
 ❖ *inv :red_circle: ➾ Invite Nameless bot to your discord server
 
