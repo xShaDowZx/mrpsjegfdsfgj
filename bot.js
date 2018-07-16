@@ -1335,6 +1335,9 @@ client.on('message', message => {
     message.channel.send(embed)      
 }});
 //verfiy
+client.on('guildMemberAdd', (member) => {
+    member.addRole(member.guild.roles.find('name', 'not active'));
+    });
     client.on('message', message => {   
       var prefix = "*"
         if(!message.channel.guild) return;
