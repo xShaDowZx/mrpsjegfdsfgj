@@ -1108,9 +1108,11 @@ client.on("message", message => {
 
 ❖ *Link  :link: ➾ Give you your Discord invite link 
 
-❖ *MCskin :heart_eyes: ➾ Shows your minecraft skin 
+❖ *mcserver-stats  :bookmark_tabs: ➾ Check any Minecraft server stats 
 
-❖ *achieve :clap: ➾ Achieve something in minecraft
+❖ *MCskin :heart_eyes: ➾ Shows your Minecraft skin
+
+❖ *achieve :clap: ➾ Achieve something in Minecraft
 
 ❖ *sug :notepad_spiral: ➾ Your suggestion
 
@@ -1343,5 +1345,21 @@ Nameless Supporters:
    
    }
    }); 
+//MC server Stats 
+client.on('message', message => {
+  const port = '25565'
+  if(message.content.startsWith('*mcserver-stats')) {
+ const args = message.content.split(" ").slice(1).join(" ")
+    if (!args) return message.channel.send("** Type the server IP ```Example: *mcserver-stats mc.hypixel.net``` **");
+        let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(`https://api.minetools.eu/favicon/${args}/25565`)
+        .addField(":scroll: Server Name",`${args}`,true)
+        .addField(":globe_with_meridians: Server Port",`${port}`)
+        .setImage(`http://status.mclive.eu/${args}/${args}/25565/banner.png`)
+        .setFooter(`${client.user.username}`)
+                .setTimestamp()
+    message.channel.send(embed)      
+}});
  
 client.login(process.env.BOT_TOKEN);
