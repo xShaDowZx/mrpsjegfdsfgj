@@ -1234,7 +1234,7 @@ client.on('message', message => {
     }
 });
 
-//search for member
+///search for member
 client.on('message', message => {
   var prefix = "*"
    let args = message.content.split(" ").slice(1);
