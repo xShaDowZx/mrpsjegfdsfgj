@@ -4,7 +4,6 @@ const prefix = '*'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setActivity(`Playing`,"*help")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -42,13 +41,22 @@ client.user.setActivity(`Playing`,"*help")
         console.log(`ON ${client.guilds.size} Servers '     Script By : _xShaDowZx ' `);
       console.log(`----------------`);
     console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity(` ON ${client.guilds.size} Servers - *help`,"*")
   client.user.setStatus("Online")
   });
   client.on("guildCreate", guild => {
     console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
   });
-  
+//Activity
+client.on('ready',() =>{
+
+setInterval(function(){
+
+client.user.setActivity(` ON ${client.guilds.size} Servers - *help`,"*")
+
+},10000)
+
+});
+
 //warn 
 client.on('message', msg => { 
     if (msg.content.startsWith('*warn')) {
