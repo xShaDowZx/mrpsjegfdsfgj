@@ -1120,6 +1120,8 @@ client.on("message", message => {
 
 ❖ *inv :red_circle: ➾ Invite Nameless bot to your discord server
 
+❖ *Support :wrench:  ➾ Join Nameless Support Discord
+
 ════════════
 
 :red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
