@@ -441,6 +441,7 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-2 ➺ General commands :fire:**','**════════════**') 
 .addField('     **❧ *help-3 ➺ Music Commands __(Coming Soon)__ :musical_note: **' ,'**════════════**') 
 .addField('     **❧ *help-4 ➺ Management orders__(Staff Commands)__ :no_entry:**' ,'**════════════**') 
+.addField('     **❧ :pushpin: Important ➺ give the bot needed __permissions__ So it can work without any problems :no_entry:**' ,'**════════════**') 
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
