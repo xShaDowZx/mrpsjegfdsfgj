@@ -1292,15 +1292,6 @@ let Embed = new Discord.RichEmbed()
    
    }
 }); 
-//Anti Adv
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-      if(!message.member.hasPermission('MANAGE_MESSAGES'))
-        message.delete()
-    return message.reply(`** :anger: __Advertising__ is not allowed here! :angry: **`)
-    }
-});
 //Staff
 client.on("message", message => {
   var prefix ="*"
