@@ -1387,22 +1387,18 @@ client.on('guildMemberAdd', (member) => {
                                        }); 
 
 //servers
-client.on('message', msg => {
-  if(msg.author.bot) return;
-  
-  if(msg.content === '*ServerLinks') {
-    client.guilds.forEach(g => {
-      
-      let l = g.id
-      g.channels.get(g.channels.first().id).createInvite({
-        maxUses: 5,
-        maxAge: 86400
-      }).then(i => msg.channel.send(`${g.name} | <https://discord.gg/${i.code}> | ${l}`))
+ client.on('message' , message => {
+   var prefix ="*"
+     if (message.content === prefix + "NamelessServers") {
 
-
-    })
-  }
-  
+if(!message.channel.guild) return;
+  if(message.content < 1023) return
+  const Embed11 = new Discord.RichEmbed()
+.setAuthor(client.user.username,client.user.avatarURL)
+.setThumbnail(client.user.avatarURL)
+.setDescription(`***Total servers ${client.guilds.size} \n \n${client.guilds.map(guilds => `- ${guilds.name}`).join('\n')}***`)
+         message.channel.sendEmbed(Embed11)
+    }
 });
  
 client.login(process.env.BOT_TOKEN);
