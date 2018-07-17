@@ -1077,7 +1077,9 @@ client.on("message", message => {
 
 ❖ *ser-av  :tent:  ➾ Shows your server avatar
 
-❖ *bot :floppy_disk: ➾ Info about the bot
+❖ *bot :floppy_disk: ➾ Shows how many server and members there
+
+❖ *Info :floppy_disk: ➾ Info about the bot
 
 ❖ *server  :recycle: ➾ For server information
 
@@ -1316,6 +1318,7 @@ Nameless Supporters:
 ════════════
 Nameless Discord Moderator:
 :wrench:-@Ashton#0546 
+:wrench:-@XITZJUSTMARWINZX_#5240 
 ════════════
 
 :red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
@@ -1391,5 +1394,22 @@ if(!message.channel.guild) return;
          message.channel.sendEmbed(Embed11)
     }
 });
- 
+//Info
+client.on('message', message => {
+    if (message.content === "*Info") {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.setTitle('**:sparkle: ─══════ {✯Nameless Bot Info✯} ══════─ :sparkle:**')
+.addField('     **❧ Owner of Nameless Bot :crown:: 【✭ @_xShaDowZx#1920 ✭】 ** ','**════════════**') 
+.addField('     **❧ Bot Info: `Nameless Bot is a simple to use with a lot of awesome commands and More coming soon!`**','**════════════**') 
+.addField('     **❧ Bot Name: `Nameless` **' ,'**════════════**') 
+.addField('     **❧ Prefix: `*`**' ,'**════════════**') 
+.addField('     **❧ Help Command: `*help`**' ,'**════════════**') 
+.addField("     **robot: Bot Invite Link:**","**https://discordapp.com/api/oauth2/authorize?client_id=465993722342014986&permissions=8&scope=bot**") 
+.addField("**:red_circle: Nameless Support Discord:tools::**","**https://discord.gg/GEUt3Ua**")
+.addField('     **:pushpin: Vote for Nameless Bot:**' ,'**https://discordbots.org/bot/465993722342014986/vote**') 
+.setColor('#7d2dbe')
+message.channel.sendEmbed(embed);
+}
+});
 client.login(process.env.BOT_TOKEN);
