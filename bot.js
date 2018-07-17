@@ -460,8 +460,8 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-setup-report ➺ Setup report 📝** ','**════════════**')  //Done
 .addField('     **❧ *help-setup-sug  ➺ Setup suggestions 📋** ','**════════════**')  //Done
 .addField('     **❧ *help-setup-welcome ➺ Setup welcome message 👋** ','**════════════**') //Done
-.addField('     **❧ *help-setup-goodbye ➺ setup goodbye message  😢** ','**════════════**') //Done
-.addField('     **❧ *help-setup-AutoRole ➺ setup Auto Role  :asterisk:** ','**════════════**') //Done
+.addField('     **❧ *help-setup-goodbye ➺ Setup goodbye message  😢** ','**════════════**') //Done
+.addField('     **❧ *help-setup-AutoRole ➺ Setup Auto Role  :asterisk:** ','**════════════**') //Done
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
 .addField("**:pushpin:  Don't forget to vote for Nameless Bot :heartbeat:**","**-https://discordbots.org/bot/465993722342014986/vote**")
 .setColor('#7d2dbe')
