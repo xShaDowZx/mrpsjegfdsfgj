@@ -1308,8 +1308,10 @@ Nameless Support Manager:
 ════════════
 Nameless Supporters:
 :one: -@BarisE#5634 
-:two: -@Ashton#0546 
-:three: -@SammyB#0788 
+:two: -@SammyB#0788
+════════════
+Nameless Discord Moderator:
+:wrench:-@Ashton#0546 
 ════════════
 :red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
 ════════════
