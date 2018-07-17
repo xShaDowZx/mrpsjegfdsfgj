@@ -443,6 +443,7 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-4 ➺ Management orders__(Staff Commands)__ :no_entry:**' ,'**════════════**') 
 .addField('     **❧ :pushpin: Important ➺ give the bot needed __permissions__ So it can work without any problems :no_entry:**' ,'**════════════**') 
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
+.addField("**:pushpin:  Don't forget to vote for Nameless Bot :heartbeat:**","**-https://discordbots.org/bot/465993722342014986/vote**")
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -461,6 +462,7 @@ let embed = new Discord.RichEmbed()
 .addField('     **❧ *help-setup-welcome ➺ Setup welcome message 👋** ','**════════════**') //Done
 .addField('     **❧ *help-setup-goodbye ➺ setup goodbye message  😢** ','**════════════**') //Done
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
+.addField("**:pushpin:  Don't forget to vote for Nameless Bot :heartbeat:**","**-https://discordbots.org/bot/465993722342014986/vote**")
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -476,6 +478,7 @@ let embed = new Discord.RichEmbed()
 .addField('** :pushpin: Important:  **',"**After you make `⚠-warns` go to this channel __perms__ then got to `@everyone` __disable send messages__**") 
 .addField('** :ok_hand: The warn is going to be like this in `⚠-warns` channel  **',"**https://imgur.com/XZd9yR3**") 
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
+.addField("**:pushpin:  Don't forget to vote for Nameless Bot :heartbeat:**","**-https://discordbots.org/bot/465993722342014986/vote**")
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -490,6 +493,7 @@ let embed = new Discord.RichEmbed()
 .addField('** :pushpin: Important:  **',"**After you make `📝-report` go to this channel __perms__ then got to `@everyone` and __disable send messages__**")
 .addField('** :ok_hand: The report is going to be like this in `📝-report` channel  **',"**https://imgur.com/vNQALax**") 
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
+.addField("**:pushpin:  Don't forget to vote for Nameless Bot :heartbeat:**","**-https://discordbots.org/bot/465993722342014986/vote**")
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -504,6 +508,7 @@ let embed = new Discord.RichEmbed()
 .addField('** :pushpin: Important:  **',"**After you make `📋-suggestions` go to this channel __perms__ then got to `@everyone` __disable send messages__**") 
 .addField('** :ok_hand: The suggestions is going to be like this in `📋-suggestions` channel  **',"**https://imgur.com/PVrgyn8**") 
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
+.addField("**:pushpin:  Don't forget to vote for Nameless Bot :heartbeat:**","**-https://discordbots.org/bot/465993722342014986/vote**")
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -517,7 +522,8 @@ let embed = new Discord.RichEmbed()
 .addField('** How to setup warn?  **',"**Just Make new channel and name it ```👋-welcome```**") 
 .addField('** :pushpin: Important:  **',"**After you make `👋-welcome` go to this channel __perms__ then got to `@everyone` __disable send messages__**") 
 .addField('** :ok_hand: The welcome message is going to be like this in `👋-welcome` channel  **',"**https://imgur.com/kFf9Mar**")
-.addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
+.addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**")
+.addField("**:pushpin:  Don't forget to vote for Nameless Bot :heartbeat:**","**-https://discordbots.org/bot/465993722342014986/vote**")
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -532,6 +538,7 @@ let embed = new Discord.RichEmbed()
 .addField('** :pushpin: Important:  **',"**After you make `😢-good-bye` go to this channel __perms__ then got to `@everyone` __disable send messages__**") 
 .addField('** :ok_hand: The goodbye message is going to be like this in `😢-good-bye` channel  **',"**https://imgur.com/OA6EJGW**")
 .addField("**:red_circle:  Nameless Support Discord :tools:   **","**-https://discord.gg/atk3A2C**") 
+.addField("**:pushpin:  Don't forget to vote for Nameless Bot :heartbeat:**","**-https://discordbots.org/bot/465993722342014986/vote**")
 .setColor('#7d2dbe')
 message.channel.sendEmbed(embed);
 }
@@ -587,6 +594,8 @@ __(Staff Commands)__
 
 :red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
 
+:pushpin:  Don't forget to vote for Nameless Bot :heartbeat: ➾ https://discordbots.org/bot/465993722342014986/vote
+
 ════════════
 
 **`)
@@ -632,6 +641,8 @@ __(Coming Soon)__
 ════════════
 
 :red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
+
+:pushpin:  Don't forget to vote for Nameless Bot :heartbeat: ➾ https://discordbots.org/bot/465993722342014986/vote
 
 ════════════
 
@@ -1113,6 +1124,8 @@ client.on("message", message => {
 
 :red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
 
+:pushpin:  Don't forget to vote for Nameless Bot :heartbeat: ➾ https://discordbots.org/bot/465993722342014986/vote
+
 ════════════
 
 **`)
@@ -1313,7 +1326,11 @@ Nameless Supporters:
 Nameless Discord Moderator:
 :wrench:-@Ashton#0546 
 ════════════
+
 :red_circle: Nameless Support Discord :tools: ➾ https://discord.gg/atk3A2C
+
+:pushpin:  Don't forget to vote for Nameless Bot :heartbeat: ➾ https://discordbots.org/bot/465993722342014986/vote
+
 ════════════
 **`)
    message.channel.sendEmbed(embed)
