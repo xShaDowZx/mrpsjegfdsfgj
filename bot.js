@@ -1079,7 +1079,7 @@ client.on("message", message => {
 
 ❖ *bot :floppy_disk: ➾ Shows how many server and members there
 
-❖ *Info :floppy_disk: ➾ Info about the bot
+❖ *Info :notebook_with_decorative_cover: ➾ Info about the bot
 
 ❖ *server  :recycle: ➾ For server information
 
