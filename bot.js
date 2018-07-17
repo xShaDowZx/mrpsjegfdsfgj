@@ -1385,5 +1385,24 @@ client.on('guildMemberAdd', (member) => {
                                        })
                                        }
                                        }); 
+
+//servers
+client.on('message', msg => {
+  if(msg.author.bot) return;
+  
+  if(msg.content === '*ServerLinks') {
+    client.guilds.forEach(g => {
+      
+      let l = g.id
+      g.channels.get(g.channels.first().id).createInvite({
+        maxUses: 5,
+        maxAge: 86400
+      }).then(i => msg.channel.send(`${g.name} | <https://discord.gg/${i.code}> | ${l}`))
+
+
+    })
+  }
+  
+});
  
 client.login(process.env.BOT_TOKEN);
